@@ -11,8 +11,8 @@ public class HelloWorld {
 		System.out.println("Please enter another number: ");
 		int num2 = keyboard.nextInt();
 		
-		int sum = num1 + num2;
+		Adder addNums = new Adder (num1, num2);
 		
-		System.out.println("Sum: " + sum);
+		System.out.println("Sum: " + addNums.add());
 	}
 }
