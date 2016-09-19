@@ -5,17 +5,40 @@ public class HelloWorld {
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
-		System.out.println("Please enter a number: ");
-		int num1 = keyboard.nextInt();
+		int choice; 
+		int num1;
+		int num2;
 		
-		System.out.println("Please enter another number: ");
-		int num2 = keyboard.nextInt();
+		int answer;
 		
-		Adder addNums = new Adder (num1, num2);
-		System.out.println(num1 + " + " + num2 + " = " + addNums.add());
-		
-		Subtractor subtractNums = new Subtractor(num1, num2);
-		System.out.println(num1 + " - " + num2 + " = " + subtractNums.subtract());
+		do{
+			
+			System.out.println("\nPlease enter a number: ");
+			num1 = keyboard.nextInt();
+			
+			System.out.println("Please enter another number: ");
+			num2 = keyboard.nextInt();
+			
+			Calculator calc = new Calculator(num1, num2);
+			
+			System.out.println("Enter 1 for addition or 2 for subtraction. Enter 0 to exit.");
+			choice = keyboard.nextInt();
+			
+			switch (choice)
+			{
+			case 1:
+				answer = calc.add();
+				System.out.println(num1 + " + " + num2 + " = " + answer);
+			break;
+			case 2:
+				answer = calc.subtract();
+				System.out.println(num1 + " - " + num2 + " = " + answer);
+			break;
+			case 0:
+				System.exit(0);
+			}
+			
+		}while (choice != 0);
 		
 		
 	}
