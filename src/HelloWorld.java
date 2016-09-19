@@ -12,7 +12,11 @@ public class HelloWorld {
 		int num2 = keyboard.nextInt();
 		
 		Adder addNums = new Adder (num1, num2);
+		System.out.println(num1 + " + " + num2 + " = " + addNums.add());
 		
-		System.out.println("Sum: " + addNums.add());
+		Subtractor subtractNums = new Subtractor(num1, num2);
+		System.out.println(num1 + " - " + num2 + " = " + subtractNums.subtract());
+		
+		
 	}
 }
